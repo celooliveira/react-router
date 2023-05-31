@@ -1,10 +1,11 @@
-import { Link } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 
-export function Home(){
+export function Produto(){
+    const {id} = useParams();
     return (
         <div>
-            <h1>Bem vindo a página Home!</h1>
-            <span>Essa é a minha primeira página com navegação</span>
+            <h1>Produto</h1>
+            <h3>Bem vindo a Página do Produto {id}!</h3>
             <br />
             <Link to="/">Home</Link>
             <br />
@@ -13,6 +14,7 @@ export function Home(){
             <Link to="/contato">Contatos</Link>
             <br />
             <Link to="/sobre">Sobre</Link>
+
         </div>
-        )
+    )
 }
